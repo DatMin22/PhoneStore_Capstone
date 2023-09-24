@@ -1,0 +1,13 @@
+a {
+	text-decoration: none;
+	transition: .3s all ease;
+	color: $dark;
+	text-decoration: underline;
+	&:hover {
+		color: $dark;
+		text-decoration: none;
+	}
+	&.more {
+		font-weight: 600;
+	}
+}
