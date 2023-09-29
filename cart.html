@@ -89,7 +89,18 @@
     <!-- PRODUCTS -->
     <div class="product-section before-footer-section">
       <div class="container">
-        <div class="row" id="products-list"></div>
+          <table class="table table-bordered border-success">
+              <thead>
+                  <th>#</th>
+                  <th>Tên sản phẩm</th>
+                  <th>Số lượng</th>
+                  <th>Giá</th>
+                  <th>Thành tiền</th>
+              </thead>
+              <tbody id="body-table-cart">
+
+              </tbody>
+          </table>
       </div>
     </div>
     <!-- END PRODUCTS -->
@@ -264,5 +275,9 @@
     <script src="./customer/controller/controller.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/cart.js"></script>
+
+    <script type="text/template" id="item-cart-tpl">
+
+    </script>
   </body>
 </html>

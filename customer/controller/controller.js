@@ -10,8 +10,7 @@ function renderProductsList(productsList) {
         <strong class="product-price">$${product.price}</strong>
 
         <span class="icon-cross">
-          <div class="btn text-white text-center">Add to Cart</div>
-
+          <div class="btn text-white text-center" onclick="cart.addCart('${product.id}', '${product.name}', '${product.price}')">Add to Cart</div>
         </span>
       </a>
   </div>
