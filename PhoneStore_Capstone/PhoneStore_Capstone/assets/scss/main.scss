@@ -1,0 +1,125 @@
+// Helper
+@import "./Helper/mixin";
+@import "./Helper/variable";
+// vendor
+
+// Base
+@import "./Base/reset";
+@import "./Base/customize";
+
+// Component
+@import "./Component/button";
+// @import "./Component/card";
+
+// Layout
+@import "./Layout/header";
+@import "./Layout/footer";
+// @import "./Layout/home";
+// @import "./Layout/products";
+
+// pages
+@import './Page/home';
+@import './Page/productDetail';
+@import './Page/shoppingCart';
+// themes
+// @import './Theme/darkTheme.scss';
+
+// variable
+
+// mixin
+// @mixin StylesButton($bg, $fs, $color, $borderRadius, $pd) {
+//     background-color: $bg;
+//     font-size: $fs;
+//     color: $color;
+//     border-radius: $borderRadius;
+//     padding: $pd;
+// }
+// @mixin styleText($fs, $color, $fw) {
+//     font-size: $fs;
+//     color: $color;
+//     font-weight: $fw;
+// }
+// // end mixin
+// .btn1 {
+//     @include StylesButton(blue, 20px, yellowgreen, 10px, 1rem);
+// }
+// .header {
+//     .navbar {
+//         background-color: pink !important;
+//         &-brand {
+//             @include styleText(50px, red, 500);
+//         }
+//     }
+// }
+// // MongoClient mongoClient = new MongoClient("mongodb://localhost:27017");
+
+// .c-list1 {
+//     //   khai báo biến $root: đại diện cho .c-list1
+//     // khai báo để khi class cha bị thay đổi tên thì ko cần phải thay đổi nhiều chỗ
+//     $root: &;
+
+//     &__item {
+//         a {
+//             color: blue;
+
+//             &:hover {
+//                 color: red;
+//             }
+//         }
+//     }
+
+//     &--color2 {
+//         // #{$root}: đại diện cho .c-list1
+//         #{$root}__item {
+//             a {
+//                 color: yellow;
+//             }
+//         }
+//     }
+// }
+
+// $breakpoint: (
+//     "extra-large": 1200px,
+//     "large": 992px,
+//     "medium": 768px,
+//     "small": 576px
+// );
+
+// @mixin responsive($screen) {
+//     @if map-has-key($map: $breakpoint, $key: $screen) {
+//         $width: map-get(
+//             $map: $breakpoint,
+//             $key: $screen
+//         );
+//         @media only screen and (max-width: $width) {
+//             @content;
+//         }
+//     }
+//     else {
+//         @warn 'No breakpoint found for "#{$screen}"';
+//     }
+// }
+
+// .test {
+//     @include responsive("medium") {
+//         color: blueviolet;
+//     }
+// }
+// $number: 1;
+// @for $number from 1 through 7 {
+//     .col-#{$number} {
+//         width: 100% * $number/7;
+//     }
+// }
+
+// // @while $number<7{
+// //     .col-#{$number} {
+// //         width: 100% * $number/6;
+// //     }
+// // }
+// $sizes: 10px,11px,12px;
+// @each $size in $sizes{
+// .size-#{$size}{
+//     font-size:$size;
+// }
+// }
