@@ -62,13 +62,16 @@ function offLoading() {
 }
 
 function reset() {
-  document.querySelector("#id").innerHTML = '';
-  document.querySelector("#name").innerHTML = '';
-  document.querySelector("#price").innerHTML = '';
-  document.querySelector("#screen").innerHTML = '';
-  document.querySelector("#backCamera").innerHTML = '';
-  document.querySelector("#frontCamera").innerHTML = '';
-  document.querySelector("#img").innerHTML = ''
-  document.querySelector("#desc").innerHTML = '';
-  document.querySelector("#type").innerHTML = '';
+  document.querySelector("#id").value = '';
+  document.querySelector("#name").value = '';
+  document.querySelector("#price").value = '';
+  document.querySelector("#screen").value = '';
+  document.querySelector("#backCamera").value = '';
+  document.querySelector("#frontCamera").value = '';
+  document.querySelector("#img").value = ''
+  document.querySelector("#desc").value = '';
+  let select = document.querySelector("#type");
+  let selectedValue = select.options[0].text;
+  document.querySelector("#type").value = selectedValue;
+
 }

@@ -175,7 +175,7 @@ function sortByPrice() {
         // var sortByPriceList = productsList.filter(function (sp) {
         //   return sp.name.toLowerCase().includes(nameSearch);
         // });
-console.log(sortByPriceList);
+        console.log(sortByPriceList);
         //render lại kết quả tìm thấy
         renderProductsList(sortByPriceList);
       })
@@ -198,7 +198,7 @@ console.log(sortByPriceList);
         // var sortByPriceList = productsList.filter(function (sp) {
         //   return sp.name.toLowerCase().includes(nameSearch);
         // });
-console.log(sortByPriceList);
+        console.log(sortByPriceList);
         //render lại kết quả tìm thấy
         renderProductsList(sortByPriceList);
       })
@@ -208,3 +208,10 @@ console.log(sortByPriceList);
   }
 
 }
+
+document.getElementById('btnThemSP').onclick = function () {
+  reset();
+  // console.log('vgfvsdgmnsd');
+}
+
+
