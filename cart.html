@@ -18,6 +18,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./assets/css/main.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/4.7.3/jquery.bootstrap-touchspin.css"
+    rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -66,17 +68,26 @@
     <div class="container">
       <table class="table table-bordered border-success" id="table_cart">
         <thead>
-          <th>#</th>
-          <th>Tên sản phẩm</th>
-          <th>Số lượng</th>
-          <th>Giá</th>
-          <th>Thành tiền</th>
-          <th></th>
+          <th style="text-align: center;">Tên sản phẩm</th>
+          <th style="text-align: center;">Số lượng</th>
+          <th style="text-align: center;">Giá</th>
+          <th style="text-align: center;">Thành tiền</th>
+          <th style="text-align: center;"></th>
         </thead>
         <tbody>
 
         </tbody>
       </table>
+
+      <div style="text-align: right;">
+        Tổng tiền: <span id="total_amount" style="font-weight: bolder;"></span>
+      </div>
+
+      <div style="text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="cart.payment()">Thanh toán</button>
+        <button type="button" class="btn btn-danger" onclick="cart.clearCart()">Hủy giỏ hàng</button>
+      </div>
+
     </div>
   </div>
   <!-- END PRODUCTS -->
@@ -222,6 +233,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
     integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/4.7.3/jquery.bootstrap-touchspin.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./assets/js/cart.js"></script>
   <script>
     cart._init();
