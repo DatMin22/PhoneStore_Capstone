@@ -74,6 +74,8 @@ var cart = {
     localStorage.setItem('item_cart', JSON.stringify(arrayItemCart));
 
     cart.showNumberCart();
+
+    Swal.fire('Thêm giỏ hàng thành công!', '', 'success');
   },
   changeQuantity: function (obj, productId, price) {
     if (arrayItemCart.some(arrayItemCart => arrayItemCart.product_id === productId)) {
