@@ -11,12 +11,3 @@ function Product(_id, _name, _price, _screen, _backCamera, _frontCamera, _img, _
   this.type = _type;
 
 }
-// "id": "1",
-// "name": "iphoneX",
-// "price": 1000,
-// "screen": "screen 68",
-// "backCamera": "2 camera 12 MP",
-// "frontCamera": "7 MP",
-// "img": "https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg",
-// "desc": "Thiết kế mang tính đột phá",
-// "type"

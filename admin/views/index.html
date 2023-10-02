@@ -74,7 +74,7 @@
         <div class="row">
           <div class="col-md-8">
             <!-- BEGIN BUTTOM THÊM MỚI -->
-            <button id="btnThemSP" class="btn btn-success"  data-toggle="modal" data-target="#myModal">
+            <button id="btnThemSP" class="btn btn-success" data-toggle="modal" data-target="#myModal">
               <i class="fa fa-plus mr-1"></i>
               Thêm Mới
             </button>
@@ -146,30 +146,42 @@
             <div class="form-group">
               <label>Tên Sản Phẩm</label>
               <input id="name" class="form-control" placeholder="Nhập vào tên sản phẩm" />
+              <span id="spName"></span>
+
             </div>
             <div class="form-group">
               <label>Giá</label>
               <input id="price" class="form-control" placeholder="Nhập vào giá" />
+              <span id="spPrice"></span>
+
             </div>
             <div class="form-group">
-              <label>Màn hình</label>
+              <label>Kích thước màn hình (inch)</label>
               <input id="screen" class="form-control" placeholder="Kích thước màn hình" />
+              <span id="spSizeScreen"></span>
+
             </div>
             <div class="form-group">
               <label>Camera trước</label>
               <input id="backCamera" class="form-control" placeholder="Camera trước" />
+              <span id="spbackCamera"></span>
+
             </div>
             <div class="form-group">
               <label>Camera sau</label>
               <input id="frontCamera" class="form-control" placeholder="Camera sau" />
+              <span id="spfrontCamera"></span>
+
             </div>
             <div class="form-group">
               <label>Hình Ảnh</label>
               <input id="img" class="form-control" placeholder="Nhập vào hình sản phẩm" />
+              <span id="spImg"></span>
             </div>
             <div class="form-group">
               <label>Mô tả</label>
               <input id="desc" class="form-control" placeholder="Mô tả sản phẩm" />
+              <span id="spDesc"></span>
             </div>
             <div class="form-group">
               <label for="">Loại sản phẩm: </label>
@@ -178,6 +190,7 @@
                 <option value="iphone">Iphone</option>
                 <option value="samsung">Samsung</option>
               </select>
+              <span id="spType"></span>
             </div>
           </div>
           <!-- Modal footer -->
@@ -215,7 +228,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
     integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+<!-- VALIDATION -->
+<script src="../util/validation.js"></script>
   <!-- MODEL -->
   <script src="../models/Product.js"></script>
 

@@ -45,21 +45,30 @@ function delProduct(id) {
 function addProduct() {
   var sp = getInfor();
   console.log("sp: ", sp);
+  // =========================================
+  // =========================================
+  if (validateForm(sp)) {
+    addNewProduct(sp)
+      .then(function (res) {
+        console.log("res", res);
+        //   tắt modal của bs sau khi thêm thành công
 
-  addNewProduct(sp)
-    .then(function (res) {
-      console.log("res", res);
-      //   tắt modal của bs sau khi thêm thành công
+        // document.getElementById('myModal')
+        $("#myModal").modal("hide");
 
-      // document.getElementById('myModal')
-      $("#myModal").modal("hide");
+        //lấy danh sách sp mới nhất từ server
+        fetchProductsList();
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
 
-      //lấy danh sách sp mới nhất từ server
-      fetchProductsList();
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
+
+
+  // =========================================
+
+
 }
 
 // cập nhật sản phẩm :
@@ -212,6 +221,105 @@ function sortByPrice() {
 document.getElementById('btnThemSP').onclick = function () {
   reset();
   // console.log('vgfvsdgmnsd');
+}
+
+// validation
+function validateForm(prod) {
+  // var Employee = getInforFromForm();
+  // E = Employee;
+
+  var valid = true;
+  // validate name
+  valid &= validationEmptyForm(
+    prod.name,
+    '#spName',
+    'Tên không được để trống!')
+    &&
+    validationName(
+      prod.name,
+      '#spName',
+      'Tên không được chứa số!'
+    )
+  //   kiemTraTrung(prod.taiKhoan,
+  //     dsnv.Employees,
+  //     "#tbTKNV",
+  //     "Mã nhân viên đã tồn tại!")
+  //   && validationTaikhoan(
+  //     prod.taiKhoan,
+  //     '#tbTKNV',
+  //     'Tài khoản phải có 4 đến 6 kí tự!');
+
+  // // validate FullName
+  // valid &= validationEmptyForm(
+  //   prod.fullName,
+  //   '#tbTen',
+  //   'Tên không được để trống!')
+  //   &&
+  //   validationName(
+  //     prod.fullName,
+  //     '#tbTen',
+  //     'Tên phải là chữ!');
+  // // validate email
+  // valid &= validationEmptyForm(
+  //   prod.email,
+  //   '#tbEmail',
+  //   'Email không được để trống!')
+  //   &&
+  //   validationEmail(
+  //     prod.email,
+  //     '#tbEmail',
+  //     'Email không đúng định dạng!')
+  // // validate mật khẩu
+  // valid &= validationEmptyForm(
+  //   prod.password,
+  //   '#tbMatKhau',
+  //   'Mật khẩu không được để trống!')
+
+  //   && validationPassword(
+  //     prod.password,
+  //     '#tbMatKhau',
+  //     'Mật khẩu chưa đúng định dạng!')
+
+
+  // // ngày vào làm
+  // valid &= validationEmptyForm(
+  //   prod.dateBeginWork,
+  //   '#tbNgay',
+  //   'Bạn chưa nhập ngày vào làm!')
+
+
+  // // validate Lương cơ bản
+  // valid &= validationNumber(
+  //   prod.basicSalary,
+  //   '#tbLuongCB',
+  //   'Lương không được để trống.'
+  // )
+  //   &&
+  //   validationBasicSalary(
+  //     prod.basicSalary,
+  //     '#tbLuongCB',
+  //     'Lương phải từ 1 triệu đến 20 triệu.'
+  //   )
+  //   ;
+
+  // // validate chức vụ
+  // valid &= validationPosition(
+  //   prod.option,
+  //   '#tbChucVu',
+  //   'Bạn chưa chọn chức vụ!');
+  // // validate số giờ làm
+  // valid &=
+  //   validationNumber(
+  //     prod.totalHourWork,
+  //     "#tbGiolam",
+  //     "Số giờ không được để trống!.")
+  //   &&
+  //   validationWorkingHourPerMonth(
+  //     prod.totalHourWork,
+  //     "#tbGiolam",
+  //     "Số giờ làm mỗi tháng phải từ 80 đến 200.");
+
+  return valid;
 }
 
 

@@ -16,7 +16,7 @@ function fetchProductsList() {
 
     getProductList()
         .then(function (res) {
-            console.log("res", res.data);
+            // console.log("res", res.data);
             renderProductsListCustomer(res.data);
             // offLoading();
         })
