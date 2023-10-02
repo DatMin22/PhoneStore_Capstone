@@ -1,22 +1,7 @@
 function fetchProductsList() {
   onLoading();
-  // axios({
-  //   url: "https://6500588418c34dee0cd4bf27.mockapi.io/products",
-  //   method: "GET",
-  // })
-  //   .then(function (res) {
-  //     console.log("res", res.data);
-  //     renderProductsList(res.data);
-  //     offLoading();
-  //   })
-  //   .catch(function (err) {
-  //     offLoading();
-  //     console.log("err", err);
-  //   });
-
   getProductList()
     .then(function (res) {
-      console.log("res", res.data);
       renderProductsList(res.data);
       offLoading();
     })
@@ -34,7 +19,6 @@ function delProduct(id) {
     .then(function (res) {
       // gọi lại api lấy lại tất cả sp trên server về sau khi xóa thành công để render ra ds mới nhất
       fetchProductsList();
-      console.log("sản phẩm bị xóa", res.data);
     })
     .catch(function (err) {
       console.log("err", err);
@@ -44,7 +28,6 @@ function delProduct(id) {
 //Thêm sản phẩm
 function addProduct() {
   var sp = getInfor();
-  console.log("sp: ", sp);
   // =========================================
   // =========================================
   if (validateForm(sp)) {
@@ -225,8 +208,6 @@ document.getElementById('btnThemSP').onclick = function () {
 
 // validation
 function validateForm(prod) {
-  // var Employee = getInforFromForm();
-  // E = Employee;
 
   var valid = true;
   // validate name
@@ -239,7 +220,83 @@ function validateForm(prod) {
       prod.name,
       '#spName',
       'Tên không được chứa số!'
-    )
+    );
+
+  // VALIDATE PRICE
+  valid &=
+    validationEmptyForm(
+      prod.price,
+      '#spPrice',
+      'Giá không được để trống!')
+    &&
+    validationNumber(
+      +prod.price,
+      '#spPrice',
+      'Giá sản phẩm phải là số dương!');
+
+
+
+  // VALIDATE SIZE SCREEN
+  valid &=
+    validationEmptyForm(
+      prod.screen,
+      '#spSizeScreen',
+      'Kích thước màn hình không được để trống!')
+    &&
+    validationNumber(
+      prod.screen,
+      '#spSizeScreen',
+      'Kích thước màn hình phải là số dương!');
+
+
+  // VALIDATE FRONT CAMERA
+  valid &=
+    validationEmptyForm(
+      prod.frontCamera,
+      '#spfrontCamera',
+      'Camera trước không được để trống!')
+    &&
+    validationNumber(
+      prod.screen,
+      '#spfrontCamera',
+      'Camera trước phải là số dương!');
+  // VALIDATE BACK CAMERA
+  valid &=
+    validationEmptyForm(
+      prod.backCamera,
+      '#spbackCamera',
+      'Camera sau không được để trống!')
+    &&
+    validationNumber(
+      prod.backCamera,
+      '#spbackCamera',
+      'Camera sau phải là số dương!');
+  // VALIDATE IMAGE
+  valid &=
+    validationEmptyForm(
+      prod.img,
+      '#spImg',
+      'Hình ảnh không được để trống!')
+
+  // VALIDATE DESCRIPTION
+  valid &=
+    validationEmptyForm(
+      prod.desc,
+      '#spDesc',
+      'Mô tả không được để trống!');
+  // VALIDATE TYPE
+  let typeInputValue = prod.type;
+  console.log('typeInputValue: ', typeInputValue);
+  // if (typeInputValue === -1 || typeInputValue =='' ) {
+  valid &=
+    validationType(
+      prod.type,
+      '#spType',
+      'Bạn chưa chọn loại hàng!');
+  // }
+
+
+
   //   kiemTraTrung(prod.taiKhoan,
   //     dsnv.Employees,
   //     "#tbTKNV",

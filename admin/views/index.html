@@ -32,33 +32,7 @@
   </div>
 
   <div class="container">
-    <!-- <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Action 1</a>
-              <a class="dropdown-item" href="#">Action 2</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
-
-    <!-- <header class="display-4 my-4">
-      Thực hành javascript - axios
-    </header> -->
+    
     <!-- Phan tab menu -->
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
@@ -104,7 +78,7 @@
           <table class="table table-bordered">
             <thead>
 
-              <th>STT</th>
+              <th>ID</th>
               <th>Tên Sản Phẩm</th>
               <th>Giá</th>
               <th>Màn hình</th>
@@ -141,56 +115,56 @@
           <div class="modal-body">
             <div class="form-group">
               <label>Mã Sản Phẩm</label>
-              <input id="id" class="form-control" placeholder="Mã sản phẩm" readonly />
+              <input id="id" sr-only class="form-control" placeholder="" readonly />
             </div>
             <div class="form-group">
               <label>Tên Sản Phẩm</label>
-              <input id="name" class="form-control" placeholder="Nhập vào tên sản phẩm" />
-              <span id="spName"></span>
+              <input id="name" class="form-control" placeholder="" />
+              <span id="spName" class="alert text-danger"></span>
 
             </div>
             <div class="form-group">
               <label>Giá</label>
               <input id="price" class="form-control" placeholder="Nhập vào giá" />
-              <span id="spPrice"></span>
+              <span id="spPrice" class="alert text-danger"></span>
 
             </div>
             <div class="form-group">
               <label>Kích thước màn hình (inch)</label>
-              <input id="screen" class="form-control" placeholder="Kích thước màn hình" />
-              <span id="spSizeScreen"></span>
+              <input id="screen" class="form-control" placeholder="" />
+              <span id="spSizeScreen" class="alert text-danger"></span>
 
             </div>
             <div class="form-group">
-              <label>Camera trước</label>
-              <input id="backCamera" class="form-control" placeholder="Camera trước" />
-              <span id="spbackCamera"></span>
+              <label>Camera trước (Mega pixel)</label>
+              <input id="frontCamera" class="form-control" placeholder="" />
+              <span id="spfrontCamera" class="alert text-danger"></span>
 
             </div>
             <div class="form-group">
-              <label>Camera sau</label>
-              <input id="frontCamera" class="form-control" placeholder="Camera sau" />
-              <span id="spfrontCamera"></span>
+              <label>Camera sau (Mega pixel)</label>
+              <input id="backCamera" class="form-control" placeholder="" />
+              <span id="spbackCamera" class="alert text-danger"></span>
 
             </div>
             <div class="form-group">
-              <label>Hình Ảnh</label>
-              <input id="img" class="form-control" placeholder="Nhập vào hình sản phẩm" />
-              <span id="spImg"></span>
+              <label>Hình ảnh (Link)</label>
+              <input id="img" class="form-control" placeholder="" />
+              <span id="spImg" class="alert text-danger"></span>
             </div>
             <div class="form-group">
               <label>Mô tả</label>
-              <input id="desc" class="form-control" placeholder="Mô tả sản phẩm" />
-              <span id="spDesc"></span>
+              <input id="desc" class="form-control" placeholder="" />
+              <span id="spDesc" class="alert text-danger"></span>
             </div>
             <div class="form-group">
               <label for="">Loại sản phẩm: </label>
-              <select class="form-control" id="type" title="loại sản phẩm">
+              <select class="form-control" id="type" title="">
                 <option value="-1">Loại sản phẩm</option>
                 <option value="iphone">Iphone</option>
                 <option value="samsung">Samsung</option>
               </select>
-              <span id="spType"></span>
+              <span id="spType" class="alert text-danger"></span>
             </div>
           </div>
           <!-- Modal footer -->

@@ -14,7 +14,7 @@ function renderProductsList(productsList) {
 
             <td>
             <img src="${product.img}" alt="" class="" 
-        onerror="this.src=https://i.ibb.co/qpB9ZCZ/placeholder.png" width="300" height="150">
+        onerror="this.src=https:://i.ibb.co/qpB9ZCZ/placeholder.png" width="300" height="150">
             </td>
             <td>${product.desc}</td>
             <td>${product.type}</td>

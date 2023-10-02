@@ -28,7 +28,7 @@ window.showProductDetail = (id) => {
                            
       
                           </div>
-                          <div class="details col-md-6 col-sm-12 mt-5 ">
+                          <div class="details col-md-6 col-sm-12 ">
                             <h3 class="product-title text-white">${Product.name}</h3>
                             <div class="rating">
                               <div class="stars">

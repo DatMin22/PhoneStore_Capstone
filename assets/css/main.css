@@ -413,6 +413,9 @@ header .custom-navbar .custom-navbar-cta li:first-child {
   #productDetailOverlay .preview {
     height: 400px;
   }
+  #productDetailOverlay .details {
+    margin-top: 5rem;
+  }
   /* .product-item .product-title{
     font-size: medium;
   } */

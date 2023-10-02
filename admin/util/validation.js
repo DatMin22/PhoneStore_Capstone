@@ -37,22 +37,52 @@ function validationName(value, idErr, message) {
     }
 
 }
-
-function validationNumber(value, idErr, message) {
+const validationNumber = (value, idErr, message) => {
+    // const regexNumber = /\S/g;
+    // regex số âm
+    const regexNegativeNumber = /-/;
+    var isNegativeNumber = regexNegativeNumber.test(value);
+    console.log('isNegativeNumber: ', isNegativeNumber);
+    console.log('value: ', typeof value);
+    // console.log('isNegativeNumber: ', isNegativeNumber);
     let DOMidErr = document.querySelector(idErr);
-    if (value === 0) {
+
+    // console.log('Number: ', Number(value));
+    if (!isNaN(value) && !isNegativeNumber) {
+        // console.log('là số');
+        DOMidErr.style.display = 'none';
+        DOMidErr.innerHTML = '';
+
+        return true;
+    }
+    else {
         DOMidErr.style.display = 'inline';
+
         DOMidErr.innerHTML = message;
         return false;
     }
-    else {
-
-        DOMidErr.style.display = 'none';
-        DOMidErr.innerHTML = '';
-        return true;
-    }
-
 }
+// function validationNumber(value, idErr, message) {
+//     let DOMidErr = document.querySelector(idErr);
+//     const regexName = /[a-zA-Z]/g;
+//     const regexNumber = /\d/;
+//     const regexSpacing = /\S/g;
+//     var isName = regexName.test(value);
+//     var isNumber = regexNumber.test(value);
+//     var isSpacing = regexSpacing.test(value);
+//     if (value === 0) {
+//         DOMidErr.style.display = 'inline';
+//         DOMidErr.innerHTML = message;
+//         return false;
+//     }
+//     else {
+
+//         DOMidErr.style.display = 'none';
+//         DOMidErr.innerHTML = '';
+//         return true;
+//     }
+
+// }
 
 function kiemTraTrung(id, listProducts, idErr, message) {
     let DOMidErr = document.querySelector(idErr);
@@ -68,6 +98,22 @@ function kiemTraTrung(id, listProducts, idErr, message) {
     } else {
         DOMidErr.style.display = 'none';
         DOMidErr.innerHTML = "";
+        return true;
+    }
+}
+
+// validate type
+function validationType(value, idErr, message) {
+    let DOMidErr = document.querySelector(idErr);
+
+    if (value === -1 || value == '') {
+        DOMidErr.style.display = 'inline';
+        DOMidErr.innerHTML = message;
+        return false;
+    } else {
+        DOMidErr.style.display = 'none';
+
+        DOMidErr.innerHTML = '';
         return true;
     }
 }
