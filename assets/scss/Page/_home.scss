@@ -91,3 +91,23 @@
         }
     }
 }
+
+@media screen and (max-width: $xl) {
+    .product-item {
+        h3.product-title {
+            font-size: 0.8rem;
+        }
+    }
+}
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
+// $xxl: 1400px;
+@media screen and (max-width: $md) {
+    .product-item {
+        h3.product-title {
+            font-size: 1.5rem;
+        }
+    }
+}

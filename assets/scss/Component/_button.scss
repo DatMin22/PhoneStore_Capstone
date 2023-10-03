@@ -1,0 +1,11 @@
+.button{
+    width: 80px;
+    padding: 0.7rem 1rem;
+    background-color: $primary;
+    color: #fff;
+    &:hover{
+        color: #fff;
+        scale: 1.25;
+        transition: all .5s ease-out;
+    }
+}

@@ -20,21 +20,24 @@
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
+<style>
+ 
+</style>
 
 <body>
   <!-- Start Header/Navigation -->
   <header>
-    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Phone navigation bar">
 
       <div class="container">
         <a class="navbar-brand" href="./index.html">Phone<span>.</span></a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-          aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsPhone"
+          aria-controls="navbarsPhone" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsFurni">
+        <div class="collapse navbar-collapse" id="navbarsPhone">
           <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item active">
               <a class="nav-link" href="./index.html">Home</a>
@@ -48,8 +51,9 @@
 
           <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
             <li><a class="nav-link" href="./admin/views/index.html" target="_blank">
-                <img src="./assets/images/shield-admin.svg" alt="">Admin</a></li>
-            <li><a class="nav-link" href="cart.html"><img src="./assets/images/cart.svg" alt=""></a></li>
+                  <img src="./assets/images/shield-admin.svg" alt="">Admin</a></li>
+            <li><a class="nav-link" href="./customer/views/shoppingCart.html"><img src="./assets/images/cart.svg"
+                  alt=""></a></li>
           </ul>
         </div>
       </div>
@@ -57,13 +61,139 @@
     </nav>
   </header>
   <!-- End Header/Navigation -->
+  <div id="productDetailOverlay" onclick="">
+
+  </div>
+
+
 
   <!-- PRODUCTS -->
   <div class="product-section before-footer-section">
     <div class="container">
       <div class="row " id="products-list">
 
+        <!-- Start Column 1 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5">
+          <a class="product-item" href="#">
+            <img src="./assets/images/iphone-x-64gb-hh-600x600.png" alt="" class="img-fluid product-thumbnail">
+            <h3 class="product-title">Iphone X 64GB</h3>
+            <strong class="product-price">$2.900.00</strong>
 
+            <span class="icon-cross">
+              <button class="btn text-white text-center">Add to Cart</button>
+
+            </span>
+          </a>
+        </div>
+        <!-- End Column 1 -->
+
+        <!-- Start Column 2 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5">
+          <a class="product-item" href="#">
+            <img src="./assets/images/samsung-galaxy-m51-trang-new-600x600-600x600-removebg-preview.png"
+              class="img-fluid product-thumbnail" alt="">
+            <h3 class="product-title">Samsung Galaxy M51</h3>
+            <strong class="product-price">$2.900.00</strong>
+
+            <span class="icon-cross">
+              <button class="btn text-white text-center">Add to Cart</button>
+
+            </span>
+          </a>
+        </div>
+        <!-- End Column 2 -->
+
+        <!-- Start Column 3 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5">
+          <a class="product-item" href="#">
+            <img src="./assets/images/iphone-12-blue-128gb-removebg-preview.png" class="img-fluid product-thumbnail">
+            <h3 class="product-title">Iphone 12 Blue 128GB</h3>
+            <strong class="product-price">$2.900.00</strong>
+
+            <span class="icon-cross">
+              <button class="btn text-white text-center">Add to Cart</button>
+
+            </span>
+          </a>
+        </div>
+        <!-- End Column 3 -->
+
+        <!-- Start Column 4 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5">
+          <a class="product-item" href="#">
+            <img src="./assets/images/iphone-14-plus-128gb-removebg-preview.png" class="img-fluid product-thumbnail">
+            <h3 class="product-title">Iphone 14 Plus 128GB</h3>
+            <strong class="product-price">$2.900.00</strong>
+
+            <span class="icon-cross">
+              <button class="btn text-white text-center">Add to Cart</button>
+
+            </span>
+          </a>
+        </div>
+        <!-- End Column 4 -->
+
+
+        <!-- Start Column 1 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5">
+          <a class="product-item" href="#">
+            <img src="./assets/images/Oppo_A16_Pearl_Blue_Mascom_International-removebg-preview.png"
+              class="img-fluid product-thumbnail">
+            <h3 class="product-title">Oppo A16 Pearl Blue </h3>
+            <strong class="product-price">$2.900.00</strong>
+
+            <span class="icon-cross">
+              <button class="btn text-white text-center">Add to Cart</button>
+
+            </span>
+          </a>
+        </div>
+        <!-- End Column 1 -->
+
+        <!-- Start Column 2 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5">
+          <a class="product-item" href="#">
+            <img src="./assets/images/iphone-x-64gb-hh-600x600.png" class="img-fluid product-thumbnail">
+            <h3 class="product-title">Nordic Chair</h3>
+            <strong class="product-price">$2.900.00</strong>
+
+            <span class="icon-cross">
+              <button class="btn text-white text-center">Add to Cart</button>
+
+            </span>
+          </a>
+        </div>
+        <!-- End Column 2 -->
+
+        <!-- Start Column 3 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5">
+          <a class="product-item" href="#">
+            <img src="./assets/images/iphone-x-64gb-hh-600x600.png" class="img-fluid product-thumbnail">
+            <h3 class="product-title">Nordic Chair</h3>
+            <strong class="product-price">$2.900.00</strong>
+
+            <span class="icon-cross">
+              <button class="btn text-white text-center">Add to Cart</button>
+              <!-- <img src="./assets/images/cross.svg" class="img-fluid"> -->
+            </span>
+          </a>
+        </div>
+        <!-- End Column 3 -->
+
+        <!-- Start Column 4 -->
+        <div class="col-12 col-md-4 col-lg-3 mb-5">
+          <a class="product-item" href="#">
+            <img src="./assets/images/iphone-x-64gb-hh-600x600.png" alt="" class="img-fluid product-thumbnail">
+            <h3 class="product-title">Nordic Chair</h3>
+            <strong class="product-price">$2.900.00</strong>
+
+            <span class="icon-cross">
+              <button class="btn text-white text-center">Add to Cart</button>
+
+            </span>
+          </a>
+        </div>
+        <!-- End Column 4 -->
 
       </div>
     </div>
@@ -75,7 +205,7 @@
   <footer class="footer-section">
     <div class="container relative">
 
-      <div class="sofa-img">
+      <div class="phone_Modal-img">
         <img src="./assets/images/3d-business-smart-watch-with-phone.png" alt="Image" class="img-fluid">
       </div>
 
@@ -105,7 +235,7 @@
 
       <div class="row g-5 mb-5">
         <div class="col-lg-4">
-          <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
+          <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Phone<span>.</span></a></div>
           <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada.
             Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
 
@@ -196,7 +326,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
     integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="./admin/services/productsServ.js"></script>
+  <script src="./customer/controller/productDetail.js"></script>
   <script src="./customer/controller/controller.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
