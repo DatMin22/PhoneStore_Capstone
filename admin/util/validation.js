@@ -44,12 +44,9 @@ const validationNumber = (value, idErr, message) => {
     var isNegativeNumber = regexNegativeNumber.test(value);
     console.log('isNegativeNumber: ', isNegativeNumber);
     console.log('value: ', typeof value);
-    // console.log('isNegativeNumber: ', isNegativeNumber);
     let DOMidErr = document.querySelector(idErr);
 
-    // console.log('Number: ', Number(value));
     if (!isNaN(value) && !isNegativeNumber) {
-        // console.log('là số');
         DOMidErr.style.display = 'none';
         DOMidErr.innerHTML = '';
 
@@ -62,27 +59,7 @@ const validationNumber = (value, idErr, message) => {
         return false;
     }
 }
-// function validationNumber(value, idErr, message) {
-//     let DOMidErr = document.querySelector(idErr);
-//     const regexName = /[a-zA-Z]/g;
-//     const regexNumber = /\d/;
-//     const regexSpacing = /\S/g;
-//     var isName = regexName.test(value);
-//     var isNumber = regexNumber.test(value);
-//     var isSpacing = regexSpacing.test(value);
-//     if (value === 0) {
-//         DOMidErr.style.display = 'inline';
-//         DOMidErr.innerHTML = message;
-//         return false;
-//     }
-//     else {
 
-//         DOMidErr.style.display = 'none';
-//         DOMidErr.innerHTML = '';
-//         return true;
-//     }
-
-// }
 
 function kiemTraTrung(id, listProducts, idErr, message) {
     let DOMidErr = document.querySelector(idErr);
