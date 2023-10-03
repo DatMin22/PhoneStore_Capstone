@@ -1,11 +1,18 @@
-.button{
-    width: 80px;
+.button {
+    width: max-content;
     padding: 0.7rem 1rem;
     background-color: $primary;
     color: #fff;
-    &:hover{
+    &:hover {
         color: #fff;
         scale: 1.25;
-        transition: all .5s ease-out;
+        transition: all 0.5s ease-out;
     }
+}
+
+.btn-payment {
+}
+.btn-cancel {
+    border: none;
+    background-color: rgb(212, 10, 10);
 }

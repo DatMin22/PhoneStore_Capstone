@@ -32,7 +32,8 @@ a.more {
 }
 
 .button {
-  width: 80px;
+  width: -moz-max-content;
+  width: max-content;
   padding: 0.7rem 1rem;
   background-color: #3b5d50;
   color: #fff;
@@ -41,6 +42,11 @@ a.more {
   color: #fff;
   scale: 1.25;
   transition: all 0.5s ease-out;
+}
+
+.btn-cancel {
+  border: none;
+  background-color: rgb(212, 10, 10);
 }
 
 header .navbar-toggler-icon {

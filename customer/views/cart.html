@@ -59,42 +59,7 @@
       </div>
     </nav>
     <!-- ============================ -->
-    <!-- Start Header/Navigation -->
 
-    <!-- <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Phone navigation bar">
-      <div class="container">
-        <a class="navbar-brand" href="../../index.html">Phone<span>.</span></a>
-        <button class="navbar-toggler" onclick="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsPhone"
-          aria-controls="navbarsPhone" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsPhone">
-          <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="../../index.html">Home</a>
-            </li>
-            <li><a class="nav-link" href="#">Shop</a></li>
-            <li><a class="nav-link" href="#">About us</a></li>
-            <li><a class="nav-link" href="#">Services</a></li>
-            <li><a class="nav-link" href="#">Blog</a></li>
-            <li><a class="nav-link" href="#">Contact us</a></li>
-          </ul>
-
-          <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-            <li>
-              <a class="nav-link" href="../../admin/views/index.html" target="_blank">
-                <img src="../../assets/images/shield-admin.svg" alt="" />Admin</a>
-            </li>
-            <li>
-              <a class="nav-link" href="cart.html"><img src="../../assets/images/cart.svg" alt="" />
-                <span style="color: #fff" id="number_cart"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
   </header>
   <!-- End Header/Navigation -->
 
@@ -115,12 +80,12 @@
       </table>
 
       <div style="text-align: right;">
-        Tổng tiền: <span id="total_amount" style="font-weight: bolder;"></span>
+        Tổng tiền: <span id="total_amount" class="text-danger" style="font-weight: bolder; font-size: 2rem;"></span>
       </div>
 
       <div style="text-align: center;">
-        <button type="button" class="btn btn-primary" onclick="cart.payment()">Thanh toán</button>
-        <button type="button" class="btn btn-danger" onclick="cart.clearCart()">Hủy giỏ hàng</button>
+        <button type="button" class="btn button btn-payment" onclick="cart.payment()">Thanh toán</button>
+        <button type="button" class="btn button btn-cancel btn-danger" onclick="cart.clearCart()">Hủy giỏ hàng</button>
       </div>
 
     </div>
@@ -150,7 +115,7 @@
                 <input type="email" class="form-control" placeholder="Enter your email" />
               </div>
               <div class="col-auto">
-                <button class="btn btn-primary">
+                <button class="btn button">
                   <span class="fa fa-paper-plane"></span>
                 </button>
               </div>
