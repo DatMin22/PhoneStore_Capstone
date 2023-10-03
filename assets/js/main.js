@@ -28,7 +28,35 @@ function fetchProductsList() {
 
 fetchProductsList();
 
-// click navbar-toggler
+// tìm theo hãng
+const findByType = () => {
+    var valueType = document.getElementById('valueType').value;
+
+    getProductList()
+        .then(function (res) {
+            // let listTypeIphone = res.data.filter((value) => value.type == 'iphone')
+            // console.log('listTypeIphone: ', listTypeIphone);
+
+            if (valueType == 'iphone') {
+                let listTypeIphone = res.data.filter((prod) => prod.type == 'iphone')
+                renderProductsListCustomer(listTypeIphone);
+            }
+            else if (valueType == 'samsung') {
+                let listTypeSamsung = res.data.filter((prod) => prod.type == 'samsung');
+                renderProductsListCustomer(listTypeSamsung);
+            }
+            else {
+                renderProductsListCustomer(res.data);
+            }
+
+        })
+        .catch(function (err) {
+            // offLoading();
+            console.log("err", err);
+        });
+
+}
+// =============
 
 //tìm kiếm
 // function searchProductByName() {

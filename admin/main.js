@@ -201,6 +201,8 @@ function sortByPrice() {
 
 }
 
+
+
 document.getElementById('btnThemSP').onclick = function () {
   reset();
   // console.log('vgfvsdgmnsd');
