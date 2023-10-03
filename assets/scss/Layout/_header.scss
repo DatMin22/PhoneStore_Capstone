@@ -1,6 +1,18 @@
-
-
 header {
+	.navbar-toggler-icon{
+		color: $white!important;
+	}
+	#collapsibleNavId {
+		@media (max-width: $md) {
+			text-align: center;
+		}
+	}
+	.custom-navbar-cta {
+		@media (max-width: $md) {
+			display: flex;
+			justify-content: center;
+		}
+	}
 	.custom-navbar {
 		background: $primary !important;
 		padding-top: 20px;

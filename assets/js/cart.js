@@ -181,3 +181,9 @@ var cart = {
     }
   }
 };
+
+const navToggler = () => {
+  // const navToggler = document.querySelector(".navbar-toggler");
+
+  document.querySelector('.collapse').className='collapsed navbar-collapse';
+}

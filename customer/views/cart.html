@@ -23,18 +23,16 @@
 </head>
 
 <body>
-  <!-- Start Header/Navigation -->
+  <!-- ============================ -->
   <header>
-    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+    <nav class="custom-navbar navbar navbar-expand-md navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="../../index.html">Phone<span>.</span></a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-          aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand text-white" href="../../index.html">Phone<span>.</span></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarsFurni">
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item active">
               <a class="nav-link" href="../../index.html">Home</a>
@@ -60,6 +58,43 @@
         </div>
       </div>
     </nav>
+    <!-- ============================ -->
+    <!-- Start Header/Navigation -->
+
+    <!-- <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Phone navigation bar">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">Phone<span>.</span></a>
+        <button class="navbar-toggler" onclick="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsPhone"
+          aria-controls="navbarsPhone" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsPhone">
+          <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="../../index.html">Home</a>
+            </li>
+            <li><a class="nav-link" href="#">Shop</a></li>
+            <li><a class="nav-link" href="#">About us</a></li>
+            <li><a class="nav-link" href="#">Services</a></li>
+            <li><a class="nav-link" href="#">Blog</a></li>
+            <li><a class="nav-link" href="#">Contact us</a></li>
+          </ul>
+
+          <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+            <li>
+              <a class="nav-link" href="../../admin/views/index.html" target="_blank">
+                <img src="../../assets/images/shield-admin.svg" alt="" />Admin</a>
+            </li>
+            <li>
+              <a class="nav-link" href="cart.html"><img src="../../assets/images/cart.svg" alt="" />
+                <span style="color: #fff" id="number_cart"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
   </header>
   <!-- End Header/Navigation -->
 
@@ -95,7 +130,7 @@
   <!-- Start Footer Section -->
   <footer class="footer-section">
     <div class="container relative">
-      <div class="sofa-img">
+      <div class="phone_Modal-img">
         <img src="../../assets/images/3d-business-smart-watch-with-phone.png" alt="Image" class="img-fluid" />
       </div>
 
@@ -237,6 +272,7 @@
     type="text/javascript"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../../assets/js/cart.js"></script>
+  <!-- <script src="../../assets/js/main.js"></script> -->
   <script>
     cart._init();
   </script>

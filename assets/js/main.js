@@ -28,7 +28,7 @@ function fetchProductsList() {
 
 fetchProductsList();
 
-
+// click navbar-toggler
 
 //tìm kiếm
 // function searchProductByName() {
@@ -80,7 +80,7 @@ fetchProductsList();
 // // bắt sự kiện thay đổi của select box bằng sự kiện onchange
 // function sortByPrice() {
 //     // console.log('h8i');
-//     // nếu tăng thì sắp xếp 
+//     // nếu tăng thì sắp xếp
 //     let sortDesc = document.querySelector('#sort');
 //     let value = sortDesc.options[sortDesc.selectedIndex].value;
 //     console.log('value: ', value);

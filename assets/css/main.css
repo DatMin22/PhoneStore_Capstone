@@ -43,6 +43,20 @@ a.more {
   transition: all 0.5s ease-out;
 }
 
+header .navbar-toggler-icon {
+  color: #ffffff !important;
+}
+@media (max-width: 768px) {
+  header #collapsibleNavId {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  header .custom-navbar-cta {
+    display: flex;
+    justify-content: center;
+  }
+}
 header .custom-navbar {
   background: #3b5d50 !important;
   padding-top: 20px;
