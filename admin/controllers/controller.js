@@ -4,23 +4,23 @@ function renderProductsList(productsList) {
     var product = productsList[i];
     var contentTr = `
         <tr>
-            <td>${product.id}</td>
-            <td>${product.name}</td>
-            <td>${product.price}</td>
+            <td scope="col">${product.id}</td>
+            <td scope="col">${product.name}</td>
+            <td scope="col">${product.price}</td>
 
-            <td>${product.screen}</td>
-            <td>${product.backCamera}</td>
-            <td>${product.frontCamera}</td>
+            <td scope="col">${product.screen}</td>
+            <td scope="col">${product.backCamera}</td>
+            <td scope="col">${product.frontCamera}</td>
 
-            <td>
-            <img src="${product.img}" alt="" class="" 
+            <td scope="col">
+            <img src="${product.img}" alt="" class="img-thumbnail" 
         onerror="this.src=https:://i.ibb.co/qpB9ZCZ/placeholder.png" width="300" height="150">
             </td>
-            <td>${product.desc}</td>
-            <td>${product.type}</td>
-            <td>
-                <button class="btn btn-warning" onclick="editProduct(${product.id})">Sửa</button>
-                <button class="btn btn-danger" onclick="delProduct(${product.id})">Xóa</button>
+            <td scope="col">${product.desc}</td>
+            <td scope="col">${product.type}</td>
+            <td scope="col" class='d-flex justify-content-center '>
+                <button class="btn button mx-2" onclick="editProduct(${product.id})">Sửa</button>
+                <button class="btn button btn-delete" onclick="delProduct(${product.id})">Xóa</button>
             </td>
         </tr>
         `;

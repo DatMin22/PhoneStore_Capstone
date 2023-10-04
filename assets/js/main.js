@@ -34,8 +34,7 @@ const findByType = () => {
 
     getProductList()
         .then(function (res) {
-            // let listTypeIphone = res.data.filter((value) => value.type == 'iphone')
-            // console.log('listTypeIphone: ', listTypeIphone);
+            
 
             if (valueType == 'iphone') {
                 let listTypeIphone = res.data.filter((prod) => prod.type == 'iphone')

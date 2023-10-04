@@ -44,11 +44,22 @@ a.more {
   transition: all 0.5s ease-out;
 }
 
-.btn-cancel {
+.btn-cancel,
+.btn-delete {
   border: none;
-  background-color: rgb(212, 10, 10);
+  background-color: rgb(191, 10, 10);
 }
 
+.btn-add {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media screen and (max-width: 576px) {
+  .btn-filter {
+    flex-direction: column;
+  }
+}
 header .navbar-toggler-icon {
   color: #ffffff !important;
 }
