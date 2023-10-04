@@ -361,6 +361,7 @@ div.findByType {
   margin-top: 6rem;
   left: 0;
   right: 0;
+  bottom: 1rem;
   background-color: #000000;
   z-index: 2;
   border-radius: 10px;
