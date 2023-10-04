@@ -46,11 +46,11 @@ window.showProductDetail = (id) => {
                             
                           
                             <div class="action d-flex ">
-                              <button class="mua-ngay btn text-white w-75 mx-2" type="button">BUY NOW</button>
-<span id='addToCart'><i class="fa-solid fa-cart-plus"></i></span>
+                              <button class="mua-ngay btn text-white w-75 mx-2"
+                              onclick="cart.addCart('${Product.id}', '${Product.name}', '${Product.price}')" type="button">BUY NOW</button>
+<span id='addToCart' onclick="cart.addCart('${Product.id}', '${Product.name}', '${Product.price}')"><i class="fa-solid fa-cart-plus"></i></span>
                               
-<!-- <button class="add-to-cart btn btn-primary text-white w-25" type="button">ADD TO CART</button>
-                              <span class="fa fa-heart text-danger"></span>-->
+
                             </div>
                           </div>
                         </div>`;

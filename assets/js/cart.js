@@ -44,6 +44,12 @@ var cart = {
     cart.calculateTotalAmount();
   },
   addCart: function (productId, productName, price) {
+    console.log('price: ', price);
+    console.log('productName: ', productName);
+    console.log('productId: ', productId);
+    
+    
+
     if (arrayItemCart.length == 0) {
       // Add Cart
       arrayItemCart.push({
