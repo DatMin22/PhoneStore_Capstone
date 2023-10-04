@@ -366,8 +366,8 @@ header .custom-navbar .custom-navbar-cta li:first-child {
 #productDetailOverlay #close {
   color: rgba(255, 255, 255, 0.737254902);
   position: fixed;
-  top: 14%;
-  right: 12%;
+  top: 22%;
+  right: 14%;
   z-index: 99999;
   display: none;
   font-weight: 400;
