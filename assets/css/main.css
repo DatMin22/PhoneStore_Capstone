@@ -348,6 +348,10 @@ header .custom-navbar .custom-navbar-cta li:first-child {
     font-size: 1.5rem;
   }
 }
+div.findByType {
+  margin-top: 7rem;
+}
+
 #productDetailOverlay {
   position: fixed;
   display: none;
