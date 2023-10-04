@@ -61,23 +61,7 @@ const validationNumber = (value, idErr, message) => {
 }
 
 
-function kiemTraTrung(id, listProducts, idErr, message) {
-    let DOMidErr = document.querySelector(idErr);
 
-    let viTri = listProducts.findIndex(function (prod) {
-        return prod.id == id;
-    });
-    if (viTri != -1) {
-        // ko tìm thấy
-        DOMidErr.style.display = 'inline';
-        DOMidErr.innerHTML = message;
-        return false;
-    } else {
-        DOMidErr.style.display = 'none';
-        DOMidErr.innerHTML = "";
-        return true;
-    }
-}
 
 // validate type
 function validationType(value, idErr, message) {

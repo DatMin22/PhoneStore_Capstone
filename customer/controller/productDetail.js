@@ -3,19 +3,14 @@
 
 // method hiện thông tin chi tiết sản phẩm lên giao diện
 window.showProductDetail = (id) => {
-  // console.log('id: ', id);
-  // console.log(' getProductByID(id): ',  getProductByID(id));
   // debugger
 
   getProductByID(id)
     .then(
       response => {
-        // console.log('response: ', response.data);
         let Product = response.data;
-        console.log('Product: ', Product);
         let content = "";
 
-        // console.log('element: ', element.id);
         if (Product.id == id) {
           let contentDiv = `
           <span id="close" title="Close" onclick='off()'>x</span>
