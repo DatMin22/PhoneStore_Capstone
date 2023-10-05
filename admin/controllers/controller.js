@@ -63,7 +63,7 @@ function offLoading() {
 }
 
 function reset() {
-  document.querySelector("#id").value = '';
+  // document.querySelector("#id").value = '';
   document.querySelector("#name").value = '';
   document.querySelector("#price").value = '';
   document.querySelector("#screen").value = '';

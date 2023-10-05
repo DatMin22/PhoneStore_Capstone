@@ -43,19 +43,4 @@ function updateProductByID(id, sp) {
   });
 }
 
-//cách 2:
 
-// var productsServ = {
-//   getProduct: function () {
-//     return axios({
-//       url: BASE_URL,
-//       method: "GET",
-//     });
-//   },
-//   delProductByID: function (id) {
-//     return axios({
-//       url: `${BASE_URL}/${id}`,
-//       method: "DELETE",
-//     });
-//   },
-// };

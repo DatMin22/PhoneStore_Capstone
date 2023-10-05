@@ -52,16 +52,17 @@
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" style="color: #3b5d50; font-size: 2rem; " id="offcanvasNavbarLabel"><b>Phone store.</b></h5>
+            <h5 class="offcanvas-title" style="color: #3b5d50; font-size: 2rem; " id="offcanvasNavbarLabel"><b>Phone
+                store.</b></h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body " style="background-color: #3b5d50;">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link text-white" style="" aria-current="page" href="#"><span id="btnThemSP" class="" data-toggle="modal"
-                    data-target="#myModal">
-                    <!-- <i class="fa fa-plus mr-1" style="border-radius: 5px;
-               padding: 1rem; background-color: #3b5d50;color: #fff;"></i> -->
+                <a class="nav-link text-white" style="" aria-current="page" href="#"><span id="btnThemSP-sidebar" onclick="openModal()"
+                    class="">
+                    <!-- data-toggle="modal"
+                    data-target="#myModal" -->
                     <i class="fa-solid fa-square-plus"></i>
 
                     Thêm mới sản phẩm
@@ -94,7 +95,9 @@
         <div class="row ">
           <div class="btn-filter w-100 col-md-12 d-flex gap-2" style="">
             <!-- BEGIN BUTTOM THÊM MỚI -->
-            <button id="btnThemSP" class="btn button btn-add" title="Thêm mới" data-toggle="modal" data-target="#myModal">
+            <button id="btnThemSP"  class="btn button btn-add" title="Thêm mới"data-toggle="modal"
+            data-target="#myModal" >
+              
               <i class="fa fa-plus mr-1"></i>
 
             </button>
@@ -216,8 +219,8 @@
           <!-- Modal footer -->
           <div class="modal-footer">
             <button class="btn btn-danger" onclick="reset()">Reset</button>
-            <button class="btn btn-dark" onclick="updateProduct()">Update</button>
-            <button class="btn btn-success" onclick="addProduct()">Add</button>
+            <button class="btn btn-dark" id="btnUpdate" onclick="updateProduct()">Update</button>
+            <button class="btn btn-success" id="btnAdd" onclick="addProduct()">Add</button>
           </div>
         </div>
       </div>

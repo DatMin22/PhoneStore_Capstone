@@ -27,6 +27,7 @@ function delProduct(id) {
 
 //Thêm sản phẩm
 function addProduct() {
+
   var sp = getInfor();
   // =========================================
   // =========================================
@@ -36,7 +37,6 @@ function addProduct() {
         console.log("res", res);
         //   tắt modal của bs sau khi thêm thành công
 
-        // document.getElementById('myModal')
         $("#myModal").modal("hide");
 
         //lấy danh sách sp mới nhất từ server
@@ -57,10 +57,13 @@ function addProduct() {
 // cập nhật sản phẩm :
 // Bước 1: lấy thông tin sản phẩm cần sửa show lên form
 function editProduct(id) {
+  // ẩn button them
+  document.querySelector("#btnAdd").style.display = "none";
+  // hieenj button thêm món
+  document.querySelector("#btnUpdate").style.display = "inline-block";
   getProductByID(id)
     .then(function (res) {
       // lấy được sp cần sửa
-      console.log("res", res.data);
       var sp = res.data;
 
       // hiển thị thông tin sp cần sửa lên modal
@@ -84,21 +87,21 @@ function editProduct(id) {
 // Bước 2: lấy thông tin từ form sau khi đã chỉnh sửa để cập nhật
 function updateProduct() {
   var sp = getInfor();
-  console.log("sp: ", sp);
+  if (validateForm(sp)) {
+    updateProductByID(sp.id, sp)
+      .then(function (res) {
+        console.log("res", res);
 
-  updateProductByID(sp.id, sp)
-    .then(function (res) {
-      console.log("res", res);
+        //tắt modal sau khi update thành công
+        $("#myModal").modal("hide");
 
-      //tắt modal sau khi update thành công
-      $("#myModal").modal("hide");
-
-      // lấy lại dssp mới nhất
-      fetchProductsList();
-    })
-    .catch(function (err) {
-      console.log("err", err);
-    });
+        // lấy lại dssp mới nhất
+        fetchProductsList();
+      })
+      .catch(function (err) {
+        console.log("err", err);
+      });
+  }
 }
 
 //tìm kiếm
@@ -129,11 +132,7 @@ function searchProductByName() {
 document
   .querySelector("#txtSearch")
   .addEventListener("keydown", function (event) {
-    console.log("event", event);
-    // event laf 1 object chứa thông tin về sự kiện
-    // event.target: trả ra cái element phát sinh ra sự kiện
-    // event.key: trả ra phím vừa mới nhấn
-    // khi nào người dùng nhấn enter mới bắt đầu tìm kiếm, tất cả những phím ko phải enter sẽ return
+
 
     if (event.key !== "Enter") return;
 
@@ -158,15 +157,11 @@ function sortByPrice() {
   if (value === 'tang') {
     getProductList()
       .then(function (res) {
-        // console.log("res", res);
 
         //array data
         var productsList = res.data;
         var sortByPriceList = productsList.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-        // //tìm kiếm tên người dùng nhập
-        // var sortByPriceList = productsList.filter(function (sp) {
-        //   return sp.name.toLowerCase().includes(nameSearch);
-        // });
+
         console.log(sortByPriceList);
         //render lại kết quả tìm thấy
         renderProductsList(sortByPriceList);
@@ -180,16 +175,12 @@ function sortByPrice() {
   if (value === 'giam') {
     getProductList()
       .then(function (res) {
-        // console.log("res", res);
 
         //array data
         var productsList = res.data;
         var sortByPriceList = productsList.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
         sortByPriceList.reverse();
-        // //tìm kiếm tên người dùng nhập
-        // var sortByPriceList = productsList.filter(function (sp) {
-        //   return sp.name.toLowerCase().includes(nameSearch);
-        // });
+
         console.log(sortByPriceList);
         //render lại kết quả tìm thấy
         renderProductsList(sortByPriceList);
@@ -204,8 +195,9 @@ function sortByPrice() {
 
 
 document.getElementById('btnThemSP').onclick = function () {
+  document.querySelector('#btnUpdate').style.display='none';
+  document.querySelector('#btnAdd').style.display='inline-block';
   reset();
-  // console.log('vgfvsdgmnsd');
 }
 
 // validation
@@ -217,12 +209,12 @@ function validateForm(prod) {
     prod.name,
     '#spName',
     'Tên không được để trống!')
-    &&
-    validationName(
-      prod.name,
-      '#spName',
-      'Tên không được chứa số!'
-    );
+    // &&
+    // validationName(
+    //   prod.name,
+    //   '#spName',
+    //   'Tên không được chứa số!'
+    // );
 
   // VALIDATE PRICE
   valid &=
@@ -287,9 +279,6 @@ function validateForm(prod) {
       '#spDesc',
       'Mô tả không được để trống!');
   // VALIDATE TYPE
-  let typeInputValue = prod.type;
-  console.log('typeInputValue: ', typeInputValue);
-  // if (typeInputValue === -1 || typeInputValue =='' ) {
   valid &=
     validationType(
       prod.type,
@@ -298,87 +287,19 @@ function validateForm(prod) {
   // }
 
 
-
-  //   kiemTraTrung(prod.taiKhoan,
-  //     dsnv.Employees,
-  //     "#tbTKNV",
-  //     "Mã nhân viên đã tồn tại!")
-  //   && validationTaikhoan(
-  //     prod.taiKhoan,
-  //     '#tbTKNV',
-  //     'Tài khoản phải có 4 đến 6 kí tự!');
-
-  // // validate FullName
-  // valid &= validationEmptyForm(
-  //   prod.fullName,
-  //   '#tbTen',
-  //   'Tên không được để trống!')
-  //   &&
-  //   validationName(
-  //     prod.fullName,
-  //     '#tbTen',
-  //     'Tên phải là chữ!');
-  // // validate email
-  // valid &= validationEmptyForm(
-  //   prod.email,
-  //   '#tbEmail',
-  //   'Email không được để trống!')
-  //   &&
-  //   validationEmail(
-  //     prod.email,
-  //     '#tbEmail',
-  //     'Email không đúng định dạng!')
-  // // validate mật khẩu
-  // valid &= validationEmptyForm(
-  //   prod.password,
-  //   '#tbMatKhau',
-  //   'Mật khẩu không được để trống!')
-
-  //   && validationPassword(
-  //     prod.password,
-  //     '#tbMatKhau',
-  //     'Mật khẩu chưa đúng định dạng!')
-
-
-  // // ngày vào làm
-  // valid &= validationEmptyForm(
-  //   prod.dateBeginWork,
-  //   '#tbNgay',
-  //   'Bạn chưa nhập ngày vào làm!')
-
-
-  // // validate Lương cơ bản
-  // valid &= validationNumber(
-  //   prod.basicSalary,
-  //   '#tbLuongCB',
-  //   'Lương không được để trống.'
-  // )
-  //   &&
-  //   validationBasicSalary(
-  //     prod.basicSalary,
-  //     '#tbLuongCB',
-  //     'Lương phải từ 1 triệu đến 20 triệu.'
-  //   )
-  //   ;
-
-  // // validate chức vụ
-  // valid &= validationPosition(
-  //   prod.option,
-  //   '#tbChucVu',
-  //   'Bạn chưa chọn chức vụ!');
-  // // validate số giờ làm
-  // valid &=
-  //   validationNumber(
-  //     prod.totalHourWork,
-  //     "#tbGiolam",
-  //     "Số giờ không được để trống!.")
-  //   &&
-  //   validationWorkingHourPerMonth(
-  //     prod.totalHourWork,
-  //     "#tbGiolam",
-  //     "Số giờ làm mỗi tháng phải từ 80 đến 200.");
-
   return valid;
 }
+
+// mở modal khi click vao btnThemSP-sibar
+const openModal = () => {
+  $("#myModal").modal("show");
+  document.querySelector('#btnUpdate').style.display='none';
+  document.querySelector('#btnAdd').style.display='inline-block';
+
+
+}
+// $("#myModal").modal("show");
+// console.log('$("#myModal").modal("show"): ', $("#myModal").modal("show"));
+
 
 

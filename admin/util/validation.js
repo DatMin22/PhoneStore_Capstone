@@ -42,8 +42,6 @@ const validationNumber = (value, idErr, message) => {
     // regex số âm
     const regexNegativeNumber = /-/;
     var isNegativeNumber = regexNegativeNumber.test(value);
-    console.log('isNegativeNumber: ', isNegativeNumber);
-    console.log('value: ', typeof value);
     let DOMidErr = document.querySelector(idErr);
 
     if (!isNaN(value) && !isNegativeNumber) {
